@@ -1,2 +1,16 @@
-Ecrire ici votre réponse à la question UML.
+Lorsqu’on veut organiser un système pour gérer des événements, deux approches principales s’offrent à nous comme dans notre examen tp: la composition et l’héritage. Chacune a ses forces et ses limites, et le choix dépendra beaucoup du contexte et des besoins du projet.
+Solution 1 : La composition
+Cette solutiorepose sur une architecture plus plate, Event centralise la gestion des événements.Les aspects spécifiques comme la récurrence et la terminaison sont délégués à des classes associées.
+Les avantages ?
+L'approche simplifie l'héritage en évitant l'héritage multiple, tout en permettant une réutilisation des classes Repetition et Termination dans différents contextes. Elle offre aussi de la flexibilité en paramétrant les événements par composition, sans nécessiter de nouvelles classes.
+Les inconvénients ?
+Avec cette flexibilité vient une certaine complexité. La classe principale, qui gère les événements, risque de se retrouver surchargée. De plus, quand tout est réparti entre différentes petites briques, il peut être plus difficile de comprendre rapidement comment le système fonctionne dans son ensemble.
+Solution 2 : L’héritage
+Ici, on suit une logique plus hiérarchique, comme un arbre généalogique. On part d’une classe de base event , et chaque type d’événement particulier est représenté par une sous-classe spécifique.
+Les avantages ?
+Ce modèle est clair et bien organisé. Chaque type d’événement a sa propre sous-classe, ce qui le rend facile à comprendre et à maintenir. Si on connaît bien le système, il est aussi rapide d’ajouter un nouveau type en créant une nouvelle sous classe.
+Les inconvénients ?
+Cette méthode est parfois un peu rigide. Si les besoins évoluent et qu’il faut changer la logique, cela peut nécessiter de revoir toute la hiérarchie. De plus, multiplier les sous classes pour chaque cas peut rapidement devenir complexe.
+—--> Les solutions de composition et d’héritage ont chacune leurs avantages et inconvénients. Le choix entre elles dépend du contexte et des besoins spécifiques du projet.
+
 
